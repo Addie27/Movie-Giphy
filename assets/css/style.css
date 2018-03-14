@@ -35,3 +35,7 @@ form {
     border: 1px solid black;
   
 }
+
+@media (max-width: 980px) {
+
+}
