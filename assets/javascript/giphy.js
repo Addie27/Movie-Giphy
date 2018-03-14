@@ -17,6 +17,20 @@ function createButtons() {
 
 createButtons();
 
+$(document).on("click", ".gif", function (){
+    var state = $(this).attr("data-state");
+
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } 
+    else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+
+});//click image close
+
 function movieInfo() {
     var movieSelected = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movieSelected + "&api_key=6Iou32kQlamjxUxsI9WiQYOVg3s60kou&limit=10&rating=g";
@@ -45,19 +59,7 @@ function movieInfo() {
 
             $("#movies").prepend(gifDiv);
 
-            $(".gif").on("click", function (){
-                var state = $(this).attr("data-state");
-        
-                if (state === "still") {
-                  $(this).attr("src", $(this).attr("data-animate"));
-                  $(this).attr("data-state", "animate");
-                } 
-                else {
-                  $(this).attr("src", $(this).attr("data-still"));
-                  $(this).attr("data-state", "still");
-                }
             
-            });//click image close
 
         };//for loop close
     });//ajax call end
