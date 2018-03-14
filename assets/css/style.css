@@ -36,6 +36,14 @@ form {
   
 }
 
+.gif {
+    float: left; 
+    border-radius: 25px; 
+    padding: 5px; 
+    width: 380px; 
+    height: 280px; 
+}
+
 @media (max-width: 420px) {
     h1, #movie-form, .gif {
         width: 100%; 

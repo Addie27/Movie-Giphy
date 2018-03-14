@@ -33,7 +33,7 @@ function movieInfo() {
 
             var movieImage = $("<img class='gif' data-state='still'>");
 
-            var image = results[i].images.fixed_height_still.url, src;
+            var image = results[i].images.fixed_height_still.url; 
             var movie = results[i].images.fixed_height.url; 
 
             movieImage.attr({
