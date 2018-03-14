@@ -19,7 +19,7 @@ createButtons();
 
 function movieInfo() {
     var movieSelected = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + movieSelected + "&api_key=6Iou32kQlamjxUxsI9WiQYOVg3s60kou&limit=10&rating=g";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movieSelected + "&api_key=6Iou32kQlamjxUxsI9WiQYOVg3s60kou&limit=10&rating=g";
 
     $.ajax({
         url: queryURL,
